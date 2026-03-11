@@ -1,7 +1,7 @@
 {
-  "name": "Enterprise Node.js CI",
-  "description": "Standard Node build with Smart-Setup and Compliance reporting.",
-  "iconName": "node-dot-js", 
-  "categories": ["Node.js", "CI"],
-  "file": "node-ci.yml"
+  "name": "Enterprise Unified Pipeline",
+  "description": "Standardized CI/CD including Node/Dotnet build and Compliance reporting.",
+  "iconName": "shield-check",
+  "categories": ["Enterprise", "CI"],
+  "file": "enterprise-pipeline.yml"
 }

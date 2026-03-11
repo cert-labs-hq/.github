@@ -1,13 +1,11 @@
-on:
-  workflow_call:
+name: Global Pipeline
+on: 
+  push:
+    branches: [ $default-branch ]
+  workflow_dispatch: # Allows manual triggers
 
 jobs:
-  build:
-    uses: ./.github/workflows/node-build.yml # Nested call
-
-  compliance:
-    needs: build
-    uses: ./.github/workflows/compliance-logic.yml # Nested call
-    with:
-      # Pass the output from the build to the compliance workflow
-      report-artifact-name: ${{ needs.build.outputs.artifact-name }}
+  everything:
+    # We use the SHA for the "Chain of Trust"
+    uses: cert-labs-hq/automations-repo/.github/workflows/universal-orchestrator.yml@03bf9694f0693f513df044940d2a0041e4d2ea88
+    secrets: inherit
