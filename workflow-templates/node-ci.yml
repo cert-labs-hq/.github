@@ -7,5 +7,5 @@ on:
 jobs:
   everything:
     # We use the SHA for the "Chain of Trust"
-    uses: cert-labs-hq/automations-repo/.github/workflows/universal-orchestrator.yml@03bf9694f0693f513df044940d2a0041e4d2ea88
+    uses: cert-labs-hq/automations-repo/.github/workflows/universal-orchestrator.yml@V1
     secrets: inherit
